@@ -1,6 +1,15 @@
 import { Calendar } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const today = new Date();
   const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
   const monthName = today.toLocaleDateString('en-US', { month: 'long' });
@@ -8,11 +17,23 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
-      {/* Decorative shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-shape-peach rounded-[60%_40%_30%_70%/60%_30%_70%_40%] opacity-80 animate-float" />
-      <div className="absolute top-32 right-20 w-24 h-24 bg-shape-peach rounded-[40%_60%_70%_30%/40%_70%_30%_60%] opacity-80 animate-float-delayed" />
-      <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-accent rounded-[50%_50%_30%_70%/50%_50%_70%_30%] opacity-60 animate-float" />
-      <div className="absolute top-40 right-1/3 w-16 h-16 bg-shape-peach rounded-[30%_70%_70%_30%/30%_30%_70%_70%] opacity-70 animate-float-delayed" />
+      {/* Decorative shapes with parallax */}
+      <div 
+        className="absolute top-20 left-10 w-32 h-32 bg-shape-peach rounded-[60%_40%_30%_70%/60%_30%_70%_40%] opacity-80 animate-float transition-transform duration-100" 
+        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+      />
+      <div 
+        className="absolute top-32 right-20 w-24 h-24 bg-shape-peach rounded-[40%_60%_70%_30%/40%_70%_30%_60%] opacity-80 animate-float-delayed transition-transform duration-100"
+        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+      />
+      <div 
+        className="absolute bottom-32 left-1/4 w-20 h-20 bg-accent rounded-[50%_50%_30%_70%/50%_50%_70%_30%] opacity-60 animate-float transition-transform duration-100"
+        style={{ transform: `translateY(${scrollY * -0.2}px)` }}
+      />
+      <div 
+        className="absolute top-40 right-1/3 w-16 h-16 bg-shape-peach rounded-[30%_70%_70%_30%/30%_30%_70%_70%] opacity-70 animate-float-delayed transition-transform duration-100"
+        style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+      />
 
       {/* Logo */}
       <div className="mb-12 text-center animate-fade-in">
