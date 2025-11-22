@@ -24,10 +24,10 @@ const WaitlistSection = () => {
     <section className="min-h-screen flex items-center justify-center px-4 relative">
       <div className="max-w-2xl w-full text-center space-y-12">
         <div className="space-y-4">
-          <h2 className="text-7xl md:text-8xl font-bold">
+          <h2 className="text-7xl md:text-8xl font-bold font-dancing">
             <span className="text-foreground">WAIT</span>
           </h2>
-          <h2 className="text-7xl md:text-8xl font-bold">
+          <h2 className="text-7xl md:text-8xl font-bold font-dancing">
             <span className="text-foreground">LIST</span>
           </h2>
         </div>
