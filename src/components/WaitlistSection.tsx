@@ -23,7 +23,7 @@ const WaitlistSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative">
       <div className="max-w-2xl w-full text-center space-y-12">
-        <div className="space-y-4">
+        <div className="space-y-4 animate-fade-in-up">
           <h2 className="text-7xl md:text-8xl font-bold font-dancing">
             <span className="text-foreground">WAIT</span>
           </h2>
@@ -32,11 +32,11 @@ const WaitlistSection = () => {
           </h2>
         </div>
 
-        <p className="text-xl text-muted-foreground">
+        <p className="text-xl text-muted-foreground animate-fade-in animation-delay-200">
           Slide the lightning bolt to join the waitlist
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in-up animation-delay-400">
           <div className="relative">
             <Input
               type="email"

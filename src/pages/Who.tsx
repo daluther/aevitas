@@ -21,11 +21,11 @@ const Who = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto space-y-16">
-          <h1 className="text-6xl md:text-7xl font-bold text-foreground">
+          <h1 className="text-6xl md:text-7xl font-bold text-foreground animate-fade-in">
             Who <span className="text-primary">?</span>
           </h1>
 
-          <div className="space-y-6 text-lg text-foreground leading-relaxed">
+          <div className="space-y-6 text-lg text-foreground leading-relaxed animate-fade-in-up animation-delay-200">
             <p className="text-2xl font-semibold">
               We're a team passionate about reimagining how people manage their time.
             </p>
@@ -36,7 +36,7 @@ const Who = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 pt-8">
+          <div className="grid md:grid-cols-2 gap-8 pt-8 animate-fade-in-up animation-delay-400">
             {team.map((member) => (
               <div 
                 key={member.name}
