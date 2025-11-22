@@ -15,14 +15,14 @@ const Hero = () => {
       <div className="absolute top-40 right-1/3 w-16 h-16 bg-shape-peach rounded-[30%_70%_70%_30%/30%_30%_70%_70%] opacity-70 animate-float-delayed" />
 
       {/* Logo */}
-      <div className="mb-12 text-center">
+      <div className="mb-12 text-center animate-fade-in">
         <h1 className="text-6xl md:text-7xl font-bold text-primary tracking-tight">
           Δevitas
         </h1>
       </div>
 
       {/* Calendar Widget */}
-      <div className="relative mb-16 transform hover:scale-105 transition-transform duration-300">
+      <div className="relative mb-16 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up animation-delay-200">
         <div className="bg-card rounded-3xl shadow-2xl overflow-hidden w-80 border-4 border-primary">
           <div className="bg-primary h-12 flex items-center justify-center relative">
             <div className="absolute left-4 w-4 h-4 bg-text-dark rounded-full" />
@@ -37,7 +37,7 @@ const Hero = () => {
       </div>
 
       {/* Tagline */}
-      <div className="text-center max-w-3xl mb-16">
+      <div className="text-center max-w-3xl mb-16 animate-fade-in-up animation-delay-400">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
           <span className="block text-foreground">A Calendar</span>
           <span className="block text-foreground">That <span className="text-primary">Listens</span></span>
