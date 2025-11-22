@@ -45,15 +45,6 @@ const Hero = () => {
         </h2>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <p className="text-xl text-muted-foreground mb-2">Psst...</p>
-        <p className="text-2xl font-bold text-foreground">
-          The <span className="text-primary">Cool</span> Stuff
-        </p>
-        <p className="text-2xl font-bold text-foreground">Starts Here</p>
-      </div>
-
       <style>{`
         @keyframes float {
           0%, 100% {

@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const Who = () => {
   const team = [
@@ -7,15 +7,13 @@ const Who = () => {
       name: "Dhruv Goswami",
       role: "Co-Founder",
       bio: "Building intelligent systems that understand human behavior and time management",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/dhruvpgoswami/"
     },
     {
       name: "Kush Patel",
       role: "Co-Founder",
       bio: "Creating seamless experiences that make productivity effortless",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/libkush/"
     }
   ];
 
@@ -61,17 +59,12 @@ const Who = () => {
                   <div className="flex gap-4 pt-4">
                     <a 
                       href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground hover:text-primary transition-colors"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="w-6 h-6" />
-                    </a>
-                    <a 
-                      href={member.github}
-                      className="text-foreground hover:text-primary transition-colors"
-                      aria-label="GitHub"
-                    >
-                      <Github className="w-6 h-6" />
                     </a>
                   </div>
                 </div>
